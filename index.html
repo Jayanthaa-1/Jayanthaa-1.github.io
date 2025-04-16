@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Your Name]'s Cybersecurity Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Dark Mode Toggle Button -->
+  <button id="darkModeToggle" class="toggle-btn">🌙</button>
 
-  <header data-aos="fade-down">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png" alt="Tux the Penguin" class="penguin-logo" />
-    <h1>Hi, I'm [Jayanthaa]</h1>
-    <p class="terminal-text">Cybersecurity Enthusiastic</p>
+  <header class="header">
+    <img src="tux.png" alt="Tux the Penguin" class="penguin-logo">
+    <h1>Hi, I'm [Your Name]</h1>
+    <p class="terminal-text">Cybersecurity | Linux Enthusiast | CTF Hunter</p>
   </header>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about" class="about-section">
     <h2>About Me</h2>
-    <p>I live and breathe terminal commands, love breaking stuff ethically, and have a soft spot for penguins (Tux gang 🐧). I'm currently learning advanced exploitation and building a Linux-based homelab.</p>
+    <p>I'm passionate about ethical hacking, Linux systems, and solving CTF challenges. I enjoy breaking down systems and securing them to be stronger!</p>
   </section>
 
-  <section id="projects" data-aos="fade-up">
-    <h2>Projects</h2>
-
-    <div class="project" data-aos="fade-right">
-      <h3>🔍 Linux Vulnerability Lab</h3>
-      <p>Set up a Debian VM with vulnerable services, ran recon with Nmap and exploited with Metasploit. Hardened with iptables and AppArmor.</p>
-    </div>
-
-    <div class="project" data-aos="fade-left">
-      <h3>🏁 CTF: Linux Privilege Escalation</h3>
-      <p>Completed Linux-based TryHackMe rooms. Techniques: SUID, PATH hijack, crontab abuse, and kernel exploits.</p>
+  <section id="projects" class="projects-section">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>🔍 Linux Vulnerability Lab</h3>
+        <p>Exploited vulnerabilities in a Debian VM and applied security patches using iptables.</p>
+      </div>
+      <div class="project-card">
+        <h3>🏁 CTF: Privilege Escalation</h3>
+        <p>Gained root access using SUID abuse and kernel exploits in Capture The Flag challenges.</p>
+      </div>
     </div>
   </section>
 
-  <section id="contact" data-aos="zoom-in">
+  <section id="contact" class="contact-section">
     <h2>Contact Me</h2>
-    <p>Email: jayanthst@outlook.com</p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yourusername" target="_blank">@yourusername</a></p>
+    <p>Email: yourname@email.com</p>
+    <p>GitHub: <a href="https://github.com/yourusername">yourusername</a></p>
   </section>
 
-  <footer data-aos="fade-up">
-    <p>&copy; 2025 [Jayanthaa] • Powered by Linux 🐧</p>
+  <footer class="footer">
+    <p>&copy; 2025 [Your Name]</p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
