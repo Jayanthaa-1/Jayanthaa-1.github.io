@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>[Jayantha]'s  Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jayantha's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Dark Mode Toggle Button -->
   <button id="darkModeToggle" class="toggle-btn">🌙</button>
 
   <header class="header">
-    <img src="tux.png" alt="Tux the Penguin" class="penguin-logo">
-    <h1>Hi, I'm [Jayantha]</h1>
-    <p class="terminal-text">Cybersecurity | Linux Enthusiast </p>
+    <img src="tux.png" alt="Tux the Penguin" class="penguin-logo" />
+    <h1>Hi, I'm <span class="name">Jayantha</span></h1>
+    <p class="terminal-text">Cybersecurity • Linux Enthusiast</p>
   </header>
 
-  <section id="about" class="about-section">
+  <section class="about-section section">
     <h2>About Me</h2>
-    <p>I'm passionate about ethical hacking, Linux systems. I enjoy breaking down systems and securing them to be stronger!</p>
+    <p>
+      I’m passionate about ethical hacking and Linux systems. I love breaking things (ethically) and building them back more secure!
+    </p>
   </section>
 
-  <section id="projects" class="projects-section">
-    <h2>My Projects</h2>
+  <section class="projects-section section">
+    <h2>Projects</h2>
     <div class="projects-container">
       <div class="project-card">
-        <h3>🔍 Linux Vulnerability Lab</h3>
-        <p>Exploited vulnerabilities in a Debian VM and applied security patches using iptables.</p>
+        <h3><i class="fas fa-shield-alt"></i> Linux Vulnerability Lab</h3>
+        <p>Exploited Debian VM vulnerabilities and patched them using iptables and system hardening techniques.</p>
       </div>
       <div class="project-card">
-        <h3>🏁 CTF: Privilege Escalation</h3>
-        <p>Gained root access using SUID abuse and kernel exploits in Capture The Flag challenges.</p>
+        <h3><i class="fas fa-user-secret"></i> CTF: Privilege Escalation</h3>
+        <p>Rooted machines using SUID abuse, kernel exploits, and hands-on enumeration in CTF environments.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="contact-section">
-    <h2>Contact Me</h2>
-    <p>Email: unknownfoxuf@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/yourusername">yourusername</a></p>
+  <section class="contact-section section">
+    <h2>Contact</h2>
+    <p><i class="fas fa-envelope"></i> Email: unknownfoxuf@gmail.com</p>
+    <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 [Jayantha]</p>
+    <p>&copy; 2025 Jayantha</p>
   </footer>
 
   <script src="script.js"></script>
