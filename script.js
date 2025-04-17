@@ -1,11 +1,5 @@
-const darkModeToggle = document.getElementById('darkModeToggle');
-
-darkModeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  
-  if (document.body.classList.contains('light-mode')) {
-    darkModeToggle.textContent = '🌞'; // Light mode icon
-  } else {
-    darkModeToggle.textContent = '🌙'; // Dark mode icon
-  }
+const toggleBtn = document.getElementById("darkModeToggle");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  toggleBtn.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
 });
