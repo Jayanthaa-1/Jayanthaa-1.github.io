@@ -73,3 +73,12 @@ function openProject(key) {
 function closePopup() {
   document.getElementById('project-popup').style.display = 'none';
 }
+function openPopup(imgSrc) {
+  document.getElementById('popup-img').src = imgSrc;
+  document.getElementById('popup').style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById('popup').style.display = "none";
+}
+
