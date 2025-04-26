@@ -2,90 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jayantha | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Intro Screen -->
   <div id="intro-screen">
-    <div id="welcome-text">Welcome</div>
-    <div id="intro-penguin">
-      <img src="tux.png" alt="Tux" class="penguin-img">
-      <div class="paper left"></div>
-      <div class="paper right"></div>
-    </div>
+    <img src="penguin.png" alt="Penguin Logo" id="logo">
+    <h1>Welcome to My Portfolio</h1>
   </div>
 
   <!-- Main Content -->
   <div id="portfolio-content">
-    <button id="darkModeToggle" class="toggle-btn">🌙</button>
-
-    <header class="header">
-      <img src="tux.png" alt="Tux" class="penguin-logo pulse">
-      <h1>Hi, I'm <span class="name">Jayantha</span></h1>
-      <p class="terminal-text" id="terminal"></p>
+    <header>
+      <h1>Hey, I'm a Cybersecurity Enthusiast</h1>
+      <p id="terminal"></p>
+      <a href="resume.pdf" download class="download-btn">Download Resume</a>
     </header>
 
-    <section class="about-section section">
-      <h2><i class="fas fa-user-secret"></i> About Me</h2>
-      <p>Cybersecurity specialist and Linux enthusiast passionate about ethical hacking and system hardening.</p>
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>I am passionate about cybersecurity, penetration testing, and ethical hacking. I love building tools and learning about Linux, Python, and IoT security!</p>
     </section>
 
-    <section class="skills-section section">
-      <h2><i class="fas fa-laptop-code"></i> Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
-        <div class="skill-item"><i class="fas fa-shield-alt"></i> Pentesting</div>
-        <div class="skill-item"><i class="fas fa-bug"></i> Vuln Research</div>
-        <div class="skill-item"><i class="fas fa-network-wired"></i> Networking</div>
-      </div>
-    </section>
-
-    <section class="projects-section section">
-      <h2><i class="fas fa-code-branch"></i> Projects</h2>
+    <section id="projects" class="section">
+      <h2>Projects</h2>
       <div class="projects-grid">
-        <div class="project-card">
-          <h3><i class="fas fa-shield-alt"></i> Keylogger with TOR Integration</h3>
-          <p>Python-based keylogger with encrypted logs and TOR network integration.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3><i class="fas fa-network-wired"></i> Penetration Testing Toolkit</h3>
-          <p>Penetration testing API with network scanning, MITM simulation, and exploit execution.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3><i class="fas fa-wifi"></i> Wi-Fi Deauthentication Attack Tool</h3>
-          <p>Wi-Fi attack tool using ESP32 to send deauth packets to disconnect devices.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3><i class="fas fa-cogs"></i> Network Reconnaissance Toolkit</h3>
-          <p>Network scanning toolkit with tools like Nmap, Netdiscover, and Wireshark for penetration tests.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
-        <div class="project-card">
-          <h3><i class="fas fa-helmet-safety"></i> Helmet Detection & Safety Automation</h3>
-          <p>YOLOv8-based helmet detection system integrated with Raspberry Pi for road safety.</p>
-          <a href="#" class="btn">View Project</a>
-        </div>
+        <button onclick="openProject('keylogger')">Keylogger with TOR Integration</button>
+        <button onclick="openProject('penetration')">Penetration Testing Toolkit</button>
+        <button onclick="openProject('wifi')">Wi-Fi Deauthentication Attack Tool</button>
+        <button onclick="openProject('recon')">Network Reconnaissance Toolkit</button>
+        <button onclick="openProject('helmet')">Helmet Detection & Safety Automation</button>
       </div>
     </section>
 
-    <section class="contact-section section">
-      <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <div class="contact-links">
-        <a href="mailto:unknownfoxuf@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://github.com/yourusername" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <section id="certificates" class="section">
+      <h2>Certificates</h2>
+      <div class="certificates-grid">
+        <button>Edit Certificate 1</button>
+        <button>Edit Certificate 2</button>
+        <button>Edit Certificate 3</button>
+        <button>Edit Certificate 4</button>
+        <button>Edit Certificate 5</button>
       </div>
     </section>
 
-    <footer class="footer">
-      <p>© 2025 Jayantha | Built with <i class="fas fa-heart"></i> and <i class="fab fa-linux"></i></p>
-    </footer>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>Email: your-email@example.com</p>
+      <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">yourgithub</a></p>
+    </section>
+  </div>
+
+  <!-- Project Popup -->
+  <div id="project-popup">
+    <div id="project-content">
+      <span id="close-popup" onclick="closePopup()">×</span>
+      <h2 id="project-title"></h2>
+      <p id="project-description"></p>
+    </div>
   </div>
 
   <script src="script.js"></script>
