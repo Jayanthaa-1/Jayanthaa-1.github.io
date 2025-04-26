@@ -3,78 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Cybersecurity Portfolio</title>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+
 <!-- Intro Screen -->
 <div id="intro-screen">
-  <img src="logo.png" alt="Logo" id="logo">
+  <img id="logo" src="penguin-small.png" alt="Logo">
   <h1>Welcome to My Portfolio</h1>
 </div>
 
+<!-- Toggle Dark Mode Button -->
+<button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+
 <!-- Main Content -->
 <div id="portfolio-content">
-
   <header>
-    <h1>My Cybersecurity Portfolio</h1>
-    <a href="resume.pdf" class="download-btn" download>Download Resume</a>
+    <h1>Hi, I'm [Your Name]</h1>
+    <a class="download-btn" href="your-resume.pdf" download>Download Resume</a>
   </header>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section">
+  <section class="section" id="projects">
     <h2>Projects</h2>
     <div class="projects-grid">
-      <button onclick="openProject('Keylogger with TOR Integration', 'Developed a Python-based keylogger for ethical testing and learning purposes. Implemented log encryption and anonymized data transfer via the TOR network.')">Keylogger with TOR Integration</button>
-
-      <button onclick="openProject('Penetration Testing Toolkit', 'Created a lightweight penetration testing API with network scanning, MITM simulation, and exploit execution. Integrated results into a Flutter-based frontend.')">Penetration Testing Toolkit</button>
-
-      <button onclick="openProject('Wi-Fi Deauthentication Attack Tool', 'Developed a Wi-Fi deauthentication attack tool using ESP32, emphasizing ethical usage and recommending WPA2/WPA3 protections.')">Wi-Fi Deauthentication Attack Tool</button>
-
-      <button onclick="openProject('Network Reconnaissance Toolkit', 'Built a comprehensive network scanning toolkit using Kali Linux tools like nmap, arp-scan, netdiscover, and Wireshark.')">Network Reconnaissance Toolkit</button>
-
-      <button onclick="openProject('Helmet Detection & Safety Automation', 'Built a YOLOv8-based real-time helmet detection model integrated with Raspberry Pi to prevent ignition without helmet detection.')">Helmet Detection & Safety Automation</button>
+      <button onclick="openProject('Keylogger with TOR Integration (Python)', 'Developed a Python-based keylogger for educational purposes with TOR support.')">Keylogger with TOR Integration</button>
+      <button onclick="openProject('Penetration Testing Toolkit', 'Created a pentesting toolkit using Kali Linux and Flask.')">Penetration Testing Toolkit</button>
+      <button onclick="openProject('Wi-Fi Deauthentication Attack Tool', 'Built using ESP32 and Arduino IDE to simulate Wi-Fi attacks.')">Wi-Fi Deauthentication Attack Tool</button>
+      <button onclick="openProject('Network Reconnaissance Toolkit', 'Made with Kali Linux tools like nmap, Wireshark, and more.')">Network Reconnaissance Toolkit</button>
+      <button onclick="openProject('Helmet Detection & Safety Automation', 'YOLOv8 based helmet detection with Raspberry Pi automation.')">Helmet Detection & Safety Automation</button>
     </div>
   </section>
 
-  <!-- Certificates Section -->
-  <section id="certificates" class="section">
+  <section class="section" id="certificates">
     <h2>Certificates</h2>
     <div class="certificates-grid">
-      <div class="certificate-item" onclick="openCertificate('certificates/CEH.jpg')">
-        <button>Certified Ethical Hacker (CEH)</button>
-      </div>
-      <div class="certificate-item" onclick="openCertificate('certificates/WebAppTesting.jpg')">
-        <button>Web Application Penetration Testing</button>
-      </div>
-      <div class="certificate-item" onclick="openCertificate('certificates/NSE1.jpg')">
-        <button>Network Security Expert (NSE 1)</button>
-      </div>
-      <div class="certificate-item" onclick="openCertificate('certificates/WiFiSecurity.jpg')">
-        <button>Wi-Fi Security Specialist</button>
-      </div>
-      <div class="certificate-item" onclick="openCertificate('certificates/PythonCyber.jpg')">
-        <button>Python for Cybersecurity</button>
-      </div>
-    </div>
-
-    <!-- Certificate Popup -->
-    <div id="popup" class="popup">
-      <span class="close" onclick="closeCertificate()">&times;</span>
-      <img id="popup-img" src="" alt="Certificate Preview">
+      <div class="certificate-item"><button onclick="openPopup('cert1.jpg')">Certificate 1</button></div>
+      <div class="certificate-item"><button onclick="openPopup('cert2.jpg')">Certificate 2</button></div>
+      <div class="certificate-item"><button onclick="openPopup('cert3.jpg')">Certificate 3</button></div>
+      <div class="certificate-item"><button onclick="openPopup('cert4.jpg')">Certificate 4</button></div>
+      <div class="certificate-item"><button onclick="openPopup('cert5.jpg')">Certificate 5</button></div>
     </div>
   </section>
-
 </div>
 
 <!-- Project Popup -->
 <div id="project-popup">
   <div id="project-content">
-    <span id="close-popup" onclick="closeProject()">&times;</span>
-    <h2 id="project-title"></h2>
-    <p id="project-description"></p>
+    <span id="close-popup" onclick="closePopup()">&times;</span>
+    <h2 id="popup-title"></h2>
+    <p id="popup-description"></p>
   </div>
+</div>
+
+<!-- Certificate Popup -->
+<div id="certificate-popup" class="popup">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <img id="certificate-img" src="" alt="Certificate">
 </div>
 
 <script src="script.js"></script>
