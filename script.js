@@ -4,31 +4,15 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
       document.getElementById('intro-screen').style.display = 'none';
       document.getElementById('portfolio-content').style.display = 'block';
-      document.getElementById('portfolio-content').style.opacity = 1;
-      // Fade in sections
-      document.querySelectorAll('.section').forEach((sec, index) => {
-        setTimeout(() => {
-          sec.classList.add('fade-in');
-        }, index * 300);
-      });
-    }, 1000); // wait for fadeout animation
-  }, 3000); // initial 3 seconds welcome
-  
+      setTimeout(() => {
+        document.getElementById('portfolio-content').style.opacity = 1;
+      }, 100);
+    }, 1000);
+  }, 3000);
 
-  // Dark Mode Toggle
-  document.getElementById('darkModeToggle').addEventListener('click', () => {
-    if (document.documentElement.getAttribute('data-theme') === 'dark') {
-      document.documentElement.removeAttribute('data-theme');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    }
-  });
-
-  // Terminal typing text
   const terminalText = document.getElementById('terminal');
   const texts = ['Ethical Hacker', 'Cybersecurity Specialist', 'Linux Enthusiast'];
-  let i = 0;
-  let j = 0;
+  let i = 0, j = 0;
   function type() {
     terminalText.innerHTML = texts[i].substring(0, j++) + '|';
     if (j <= texts[i].length) {
@@ -43,4 +27,49 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
   type();
+
+  // Scroll Animation
+  const sections = document.querySelectorAll('.section');
+  window.addEventListener('scroll', () => {
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if(sectionTop < window.innerHeight - 100) {
+        section.classList.add('fade-in');
+      }
+    });
+  });
 });
+
+// Project popup
+const projectData = {
+  keylogger: {
+    title: "Keylogger with TOR Integration (Python)",
+    description: "Developed a Python-based keylogger for educational purposes. Implemented log encryption and anonymized data transfer via the TOR network."
+  },
+  penetration: {
+    title: "Penetration Testing Toolkit (Kali Linux + Flask API)",
+    description: "Created a penetration testing API with network scanning, MITM simulation, and exploit automation using Python Flask and Bash."
+  },
+  wifi: {
+    title: "Wi-Fi Deauthentication Attack Tool (ESP32)",
+    description: "Built a Wi-Fi deauth tool using ESP32 exploiting IEEE 802.11 protocol to showcase security risks and recommend WPA2/WPA3 protections."
+  },
+  recon: {
+    title: "Network Reconnaissance Toolkit using Kali Linux",
+    description: "Built a toolkit using nmap, arp-scan, netdiscover, Wireshark for automated local subnet scanning and enumeration."
+  },
+  helmet: {
+    title: "Helmet Detection & Safety Automation System",
+    description: "Developed YOLOv8-based real-time helmet detection model integrated with Raspberry Pi, enhancing road safety automation."
+  }
+};
+
+function openProject(key) {
+  document.getElementById('project-title').textContent = projectData[key].title;
+  document.getElementById('project-description').textContent = projectData[key].description;
+  document.getElementById('project-popup').style.display = 'flex';
+}
+
+function closePopup() {
+  document.getElementById('project-popup').style.display = 'none';
+}
