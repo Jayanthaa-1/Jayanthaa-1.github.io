@@ -9,85 +9,65 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Intro Screen -->
+
+  <header id="header">
+    <div class="navbar">
+      <h1>Jayantha | Cybersecurity Portfolio</h1>
+      <button id="darkModeToggle" class="toggle-btn">🌙</button>
+    </div>
+  </header>
+
   <div id="intro-screen">
     <div id="welcome-text">Welcome</div>
     <div id="intro-penguin">
       <img src="tux.png" alt="Tux" class="penguin-img">
-      <div class="paper left"></div>
-      <div class="paper right"></div>
     </div>
   </div>
 
-  <!-- Main Content -->
   <div id="portfolio-content">
-    <button id="darkModeToggle" class="toggle-btn">🌙</button>
-
-    <header class="header">
-      <img src="tux.png" alt="Tux" class="penguin-logo pulse">
-      <h1>Hi, I'm <span class="name">Jayantha</span></h1>
-      <p class="terminal-text" id="terminal"></p>
-    </header>
-
     <section class="about-section section">
-      <h2><i class="fas fa-user-secret"></i> About Me</h2>
-      <p>Cybersecurity specialist and Linux enthusiast passionate about ethical hacking and system hardening.</p>
+      <h2>About Me</h2>
+      <p>Cybersecurity and Linux enthusiast passionate about ethical hacking and system hardening.</p>
     </section>
 
     <section class="skills-section section">
-      <h2><i class="fas fa-laptop-code"></i> Skills</h2>
+      <h2>Skills</h2>
       <div class="skills-grid">
-        <div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
-        <div class="skill-item"><i class="fas fa-shield-alt"></i> Pentesting</div>
-        <div class="skill-item"><i class="fas fa-bug"></i> Vuln Research</div>
-        <div class="skill-item"><i class="fas fa-network-wired"></i> Networking</div>
+        <div class="skill-item">Linux</div>
+        <div class="skill-item">Pentesting</div>
+        <div class="skill-item">Vuln Research</div>
+        <div class="skill-item">Networking</div>
       </div>
     </section>
 
     <section class="projects-section section">
-      <h2><i class="fas fa-code-branch"></i> Projects</h2>
+      <h2>Projects</h2>
       <div class="projects-grid">
         <div class="project-card">
-          <h3><i class="fas fa-shield-alt"></i> Linux Security Lab</h3>
-          <p>Exploited and patched Debian vulnerabilities.</p>
+          <h3>Keylogger with TOR Integration</h3>
+          <p>Python-based keylogger with log encryption and TOR network integration.</p>
           <a href="#" class="btn">View Project</a>
         </div>
-        <!-- Add more projects as needed -->
-      </div>
-    </section>
-
-    <section class="certs-section section">
-      <h2><i class="fas fa-certificate"></i> Certifications</h2>
-      <div class="certs-grid">
-        <div class="cert-card" data-cert="ceh">
-          <h3><i class="fas fa-shield-alt"></i> CEH</h3>
-          <p>EC-Council | 2024</p>
-          <button class="btn-outline">View Details</button>
+        <div class="project-card">
+          <h3>Penetration Testing Toolkit</h3>
+          <p>Created an API for penetration testing using Flask and Bash scripts.</p>
+          <a href="#" class="btn">View Project</a>
         </div>
-        <!-- Add more certs as needed -->
       </div>
     </section>
 
     <section class="contact-section section">
-      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <h2>Contact</h2>
       <div class="contact-links">
-        <a href="mailto:unknownfoxuf@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://github.com/yourusername" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="mailto:jayanthst@outlook.com" class="btn">Email</a>
+        <a href="https://github.com/Jayanthaa-1" class="btn" target="_blank">GitHub</a>
       </div>
     </section>
-
-    <footer class="footer">
-      <p>© 2025 Jayantha | Built with <i class="fas fa-heart"></i> and <i class="fab fa-linux"></i></p>
-    </footer>
   </div>
 
-  <!-- Cert Modal -->
-  <div id="certModal" class="modal">
-    <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <div id="modal-content"></div>
-    </div>
-  </div>
+  <footer class="footer">
+    <p>© 2025 Jayantha | Built like a Gun </p>
+  </footer>
 
   <script src="script.js"></script>
 </body>
