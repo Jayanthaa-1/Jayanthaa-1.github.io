@@ -1,5 +1,5 @@
-// Intro Screen fade out
-window.addEventListener('load', () => {
+// Intro screen logic
+window.addEventListener('load', function() {
   setTimeout(() => {
     document.getElementById('intro-screen').style.opacity = '0';
     setTimeout(() => {
@@ -12,41 +12,36 @@ window.addEventListener('load', () => {
   }, 1500);
 });
 
-// Fade in sections on scroll
-const sections = document.querySelectorAll('.section');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
+// Scroll animations
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('.section');
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      section.classList.add('fade-in');
     }
   });
-}, { threshold: 0.3 });
-
-sections.forEach(section => {
-  observer.observe(section);
 });
 
-// Project Popup Functions
+// Dark mode toggle
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+}
+
+// Project popup
 function openProject(title, description) {
-  document.getElementById('project-title').textContent = title;
-  document.getElementById('project-description').textContent = description;
+  document.getElementById('popup-title').innerText = title;
+  document.getElementById('popup-description').innerText = description;
   document.getElementById('project-popup').style.display = 'flex';
 }
 
-function closeProject() {
+function closePopup() {
   document.getElementById('project-popup').style.display = 'none';
+  document.getElementById('certificate-popup').style.display = 'none';
 }
 
-// Certificate Popup Functions
-function openCertificate(imgSrc) {
-  document.getElementById('popup-img').src = imgSrc;
-  document.getElementById('popup').style.display = 'block';
-}
-
-function closeCertificate() {
-  document.getElementById('popup').style.display = 'none';
-}
-// Dark Mode Toggle
-function toggleTheme() {
-  document.body.classList.toggle('dark');
+// Certificate popup
+function openPopup(imageSrc) {
+  document.getElementById('certificate-img').src = imageSrc;
+  document.getElementById('certificate-popup').style.display = 'block';
 }
