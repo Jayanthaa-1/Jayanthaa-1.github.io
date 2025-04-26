@@ -1,119 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jayantha's Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jayantha | Cybersecurity Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* ===== INTRO ANIMATION ===== */
-    #intro-screen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #1a202c;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      color: white;
-    }
-    
-    #welcome-text {
-      font-size: 3rem;
-      font-family: 'Fira Code', monospace;
-      margin-bottom: 2rem;
-      text-align: center;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.5s forwards 0.5s;
-    }
-    
-    #intro-penguin {
-      width: 150px;
-      height: 150px;
-      position: relative;
-      animation: 
-        float 3s ease-in-out infinite,
-        tearDown 1.5s forwards 2s;
-    }
-    
-    .paper {
-      position: absolute;
-      background: white;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      transform-origin: top center;
-    }
-    
-    .paper.left {
-      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-      animation: tearLeft 1s forwards 2s;
-    }
-    
-    .paper.right {
-      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-      animation: tearRight 1s forwards 2s;
-    }
-    
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-    
-    @keyframes tearDown {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(100vh); }
-    }
-    
-    @keyframes tearLeft {
-      100% { transform: rotate(-30deg) translateX(-50%) translateY(50%); }
-    }
-    
-    @keyframes tearRight {
-      100% { transform: rotate(30deg) translateX(50%) translateY(50%); }
-    }
-    
-    /* Rest of your existing CSS... */
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Intro Screen -->
   <div id="intro-screen">
     <div id="welcome-text">Welcome</div>
     <div id="intro-penguin">
-      <img src="tux.png" alt="Tux" style="width:100%; position:relative; z-index:2;">
+      <img src="tux.png" alt="Tux" class="penguin-img">
       <div class="paper left"></div>
       <div class="paper right"></div>
     </div>
   </div>
 
-  <!-- Your existing portfolio content (hidden at first) -->
-  <div id="portfolio-content" style="display:none;">
-    <!-- ... Your existing header, sections, etc ... -->
+  <!-- Main Content -->
+  <div id="portfolio-content">
+    <button id="darkModeToggle" class="toggle-btn">🌙</button>
+
+    <header class="header">
+      <img src="tux.png" alt="Tux" class="penguin-logo pulse">
+      <h1>Hi, I'm <span class="name">Jayantha</span></h1>
+      <p class="terminal-text" id="terminal"></p>
+    </header>
+
+    <section class="about-section section">
+      <h2><i class="fas fa-user-secret"></i> About Me</h2>
+      <p>Cybersecurity specialist and Linux enthusiast passionate about ethical hacking and system hardening.</p>
+    </section>
+
+    <section class="skills-section section">
+      <h2><i class="fas fa-laptop-code"></i> Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item"><i class="fab fa-linux"></i> Linux</div>
+        <div class="skill-item"><i class="fas fa-shield-alt"></i> Pentesting</div>
+        <div class="skill-item"><i class="fas fa-bug"></i> Vuln Research</div>
+        <div class="skill-item"><i class="fas fa-network-wired"></i> Networking</div>
+      </div>
+    </section>
+
+    <section class="projects-section section">
+      <h2><i class="fas fa-code-branch"></i> Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3><i class="fas fa-shield-alt"></i> Linux Security Lab</h3>
+          <p>Exploited and patched Debian vulnerabilities.</p>
+          <a href="#" class="btn">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
+
+    <section class="certs-section section">
+      <h2><i class="fas fa-certificate"></i> Certifications</h2>
+      <div class="certs-grid">
+        <div class="cert-card" data-cert="ceh">
+          <h3><i class="fas fa-shield-alt"></i> CEH</h3>
+          <p>EC-Council | 2024</p>
+          <button class="btn-outline">View Details</button>
+        </div>
+        <!-- Add more certs as needed -->
+      </div>
+    </section>
+
+    <section class="contact-section section">
+      <h2><i class="fas fa-envelope"></i> Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:unknownfoxuf@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://github.com/yourusername" class="btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2025 Jayantha | Built with <i class="fas fa-heart"></i> and <i class="fab fa-linux"></i></p>
+    </footer>
   </div>
 
-  <script>
-    // After animations complete, show portfolio
-    setTimeout(() => {
-      document.getElementById('intro-screen').style.display = 'none';
-      document.getElementById('portfolio-content').style.display = 'block';
-      
-      // Trigger content animations
-      document.querySelectorAll('.fade-in').forEach(el => {
-        el.style.animationPlayState = 'running';
-      });
-    }, 3500); // Matches total animation time
-  </script>
+  <!-- Cert Modal -->
+  <div id="certModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
