@@ -46,3 +46,7 @@ function openCertificate(imgSrc) {
 function closeCertificate() {
   document.getElementById('popup').style.display = 'none';
 }
+// Dark Mode Toggle
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+}
