@@ -1,29 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Intro screen animation
-  setTimeout(() => {
-    document.getElementById('intro-screen').style.display = 'none';
-    document.getElementById('portfolio-content').style.display = 'block';
-  }, 3000);
+document.getElementById('darkModeToggle').addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+});
 
-  // Dark mode toggle
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    body.setAttribute('data-theme', 'dark');
-    darkModeToggle.textContent = '☀️';
-  }
-
-  darkModeToggle.addEventListener('click', () => {
-    if (body.getAttribute('data-theme') === 'dark') {
-      body.removeAttribute('data-theme');
-      darkModeToggle.textContent = '🌙';
-      localStorage.setItem('theme', 'light');
-    } else {
-      body.setAttribute('data-theme', 'dark');
-      darkModeToggle.textContent = '☀️';
-      localStorage.setItem('theme', 'dark');
-    }
+document.querySelectorAll('.btn-outline').forEach(function(button) {
+  button.addEventListener('click', function() {
+    document.getElementById('certModal').classList.add('show');
+    document.getElementById('modal-content').innerHTML = 'Certification details here...';
   });
+});
+
+document.querySelector('.close-modal').addEventListener('click', function() {
+  document.getElementById('certModal').classList.remove('show');
 });
