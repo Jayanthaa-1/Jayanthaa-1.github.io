@@ -4,52 +4,116 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jayantha's Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== INTRO ANIMATION ===== */
+    #intro-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #1a202c;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      color: white;
+    }
+    
+    #welcome-text {
+      font-size: 3rem;
+      font-family: 'Fira Code', monospace;
+      margin-bottom: 2rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.5s forwards 0.5s;
+    }
+    
+    #intro-penguin {
+      width: 150px;
+      height: 150px;
+      position: relative;
+      animation: 
+        float 3s ease-in-out infinite,
+        tearDown 1.5s forwards 2s;
+    }
+    
+    .paper {
+      position: absolute;
+      background: white;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      transform-origin: top center;
+    }
+    
+    .paper.left {
+      clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+      animation: tearLeft 1s forwards 2s;
+    }
+    
+    .paper.right {
+      clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+      animation: tearRight 1s forwards 2s;
+    }
+    
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes tearDown {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100vh); }
+    }
+    
+    @keyframes tearLeft {
+      100% { transform: rotate(-30deg) translateX(-50%) translateY(50%); }
+    }
+    
+    @keyframes tearRight {
+      100% { transform: rotate(30deg) translateX(50%) translateY(50%); }
+    }
+    
+    /* Rest of your existing CSS... */
+  </style>
 </head>
 <body>
-  <button id="darkModeToggle" class="toggle-btn">🌙</button>
-
-  <header class="header">
-    <img src="tux.png" alt="Tux the Penguin" class="penguin-logo" />
-    <h1>Hi, I'm <span class="name">Jayantha</span></h1>
-    <p class="terminal-text">Cybersecurity • Linux Enthusiast</p>
-  </header>
-
-  <section class="about-section section">
-    <h2>About Me</h2>
-    <p>
-      I’m passionate about ethical hacking and Linux systems. I love breaking things (ethically) and building them back more secure!
-    </p>
-  </section>
-
-  <section class="projects-section section">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3><i class="fas fa-shield-alt"></i> Linux Vulnerability Lab</h3>
-        <p>Exploited Debian VM vulnerabilities and patched them using iptables.</p>
-        <a href="project1.html" class="project-btn">View Project</a>
-      </div>
-      <div class="project-card">
-        <h3><i class="fas fa-user-secret"></i> CTF: Privilege Escalation</h3>
-        <p>Rooted machines using SUID abuse, kernel exploits, and enumeration techniques.</p>
-        <a href="project2.html" class="project-btn">View Project</a>
-      </div>
+  <!-- Intro Screen -->
+  <div id="intro-screen">
+    <div id="welcome-text">Welcome</div>
+    <div id="intro-penguin">
+      <img src="tux.png" alt="Tux" style="width:100%; position:relative; z-index:2;">
+      <div class="paper left"></div>
+      <div class="paper right"></div>
     </div>
-  </section>
+  </div>
 
-  <section class="contact-section section">
-    <h2>Contact</h2>
-    <p><i class="fas fa-envelope"></i> Email: unknownfoxuf@gmail.com</p>
-    <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></p>
-  </section>
+  <!-- Your existing portfolio content (hidden at first) -->
+  <div id="portfolio-content" style="display:none;">
+    <!-- ... Your existing header, sections, etc ... -->
+  </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Jayantha</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script>
+    // After animations complete, show portfolio
+    setTimeout(() => {
+      document.getElementById('intro-screen').style.display = 'none';
+      document.getElementById('portfolio-content').style.display = 'block';
+      
+      // Trigger content animations
+      document.querySelectorAll('.fade-in').forEach(el => {
+        el.style.animationPlayState = 'running';
+      });
+    }, 3500); // Matches total animation time
+  </script>
 </body>
 </html>
