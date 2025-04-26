@@ -1,137 +1,209 @@
-/* General styles */
-body {
-  font-family: 'Roboto', sans-serif;
+/* === Variables === */
+:root {
+  --primary: #2d3748;
+  --secondary: #4a5568;
+  --accent: #4299e1;
+  --text: #1a202c;
+  --bg: #f7fafc;
+  --card-bg: #ffffff;
+  --toggle-bg: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  --primary: #81e6d9;
+  --secondary: #a0aec0;
+  --accent: #63b3ed;
+  --text: #e2e8f0;
+  --bg: #1a202c;
+  --card-bg: #2d3748;
+  --toggle-bg: #4a5568;
+}
+
+/* === Base Styles === */
+* {
   margin: 0;
   padding: 0;
-  background-color: #121212;
-  color: #ffffff;
+  box-sizing: border-box;
+  transition: background 0.3s, color 0.2s;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
   overflow-x: hidden;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-h1, h2 {
-  transition: color 0.3s ease;
+/* === Intro Animation === */
+#intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1a202c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-/* Dark Mode Styles */
-body.dark-mode {
-  background-color: #1c1c1c;
-  color: #ffffff;
+#welcome-text {
+  font-size: 3rem;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards 0.5s;
 }
 
-/* Header */
+#intro-penguin {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  animation: 
+    float 3s ease-in-out infinite,
+    tearDown 1.5s forwards 2s;
+}
+
+.penguin-img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.paper {
+  position: absolute;
+  background: white;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: top center;
+}
+
+.paper.left {
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  animation: tearLeft 1s forwards 2s;
+}
+
+.paper.right {
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  animation: tearRight 1s forwards 2s;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes tearDown {
+  to { transform: translateY(100vh); }
+}
+
+@keyframes tearLeft {
+  to { transform: rotate(-30deg) translateX(-50%) translateY(50%); }
+}
+
+@keyframes tearRight {
+  to { transform: rotate(30deg) translateX(50%) translateY(50%); }
+}
+
+/* === Main Content === */
+#portfolio-content {
+  display: none;
+}
+
 .header {
   text-align: center;
-  margin-top: 50px;
+  margin: 2rem 0;
 }
 
 .penguin-logo {
-  width: 100px;
+  width: 60px; /* Adjusted size */
+  border-radius: 50%;
+  border: 3px solid var(--accent);
   animation: pulse 1.5s infinite;
 }
 
+.pulse {
+  animation: pulse 2s infinite;
+}
+
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
 }
 
-h1 {
-  font-size: 36px;
-  margin: 10px 0;
-  color: #00ff00;
+.name {
+  color: var(--accent);
 }
 
-.terminal-text {
-  font-family: 'Fira Code', monospace;
-  font-size: 18px;
-  color: #00ff00;
-  animation: typing 3s steps(30) 1s forwards;
-}
-
-@keyframes typing {
-  0% { width: 0; }
-  100% { width: 100%; }
-}
-
-h2 {
-  font-size: 28px;
-  border-bottom: 2px solid #00ff00;
-  padding-bottom: 10px;
-  color: #00ff00;
-}
-
-/* Sections */
 .section {
-  margin: 50px 0;
-  transition: transform 0.3s ease-in-out;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
 }
 
-.section:hover {
-  transform: scale(1.02);
+.fade-in {
+  animation: fadeInUp 0.5s forwards;
 }
 
-.projects-grid, .certs-grid {
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === Grid Layouts === */
+.skills-grid, .projects-grid, .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  transition: grid-template-columns 0.3s ease;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.project-card, .cert-card {
-  background-color: #1a1a1a;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.skill-item, .project-card, .cert-card {
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.3s;
 }
 
 .project-card:hover, .cert-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 40px rgba(0, 255, 0, 0.5);
+  transform: translateY(-5px);
 }
 
-.project-card h3, .cert-card h3 {
-  font-size: 20px;
-  transition: color 0.3s ease;
-}
-
-.project-card p, .cert-card p {
-  font-size: 16px;
-}
-
-.project-card .btn, .cert-card .btn-outline {
-  background-color: #00ff00;
-  color: #000000;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
+/* === Buttons === */
+.btn {
   display: inline-block;
-  margin-top: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 1rem;
 }
 
-.project-card .btn:hover, .cert-card .btn-outline:hover {
-  background-color: #008800;
-  transform: scale(1.05);
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
-.project-card .btn:active, .cert-card .btn-outline:active {
-  transform: scale(0.95);
-}
-
-.project-card .btn {
-  background-color: #00b300;
-}
-
-.project-card .btn:hover {
-  background-color: #009900;
-}
-
-/* Modal */
+/* === Modal === */
 .modal {
   display: none;
   position: fixed;
@@ -139,68 +211,23 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-  background-color: #2e2e2e;
-  margin: 15% auto;
-  padding: 30px;
-  border-radius: 12px;
-  width: 50%;
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
-}
-
-.modal.show .modal-content {
-  transform: scale(1);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 80%;
 }
 
 .close-modal {
-  color: #ffffff;
-  font-size: 30px;
-  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 10px;
-}
-
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #1a1a1a;
-  margin-top: 50px;
-  border-top: 3px solid #00ff00;
-  font-size: 14px;
-  color: #777;
-  transition: color 0.3s ease;
-}
-
-.footer a {
-  color: #00ff00;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer a:hover {
-  color: #008800;
-}
-
-/* Media Queries for responsive design */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-  .certs-grid {
-    grid-template-columns: 1fr;
-  }
+  font-size: 1.5rem;
+  cursor: pointer;
 }
