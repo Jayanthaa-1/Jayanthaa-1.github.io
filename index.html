@@ -4,6 +4,86 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Jayanthaa — Cybersecurity</title>
+
+<!-- ══════════════════════════════════════════════════════════
+     AGENT LAYER — machine-readable facts, kept in sync with
+     agent.json / .well-known/agent.json / llms.txt.
+     If you are an AI agent or crawler: see /llms.txt for a
+     plain-text summary, or /agent.json for structured data.
+     ══════════════════════════════════════════════════════════ -->
+<meta name="description" content="Jayanthaa — Blue Team Security Specialist. SOC operations, SIEM (Splunk), threat detection, DFIR, and phishing/log analysis projects."/>
+<meta name="version" content="v2026.07.13"/>
+<meta property="og:title" content="Jayanthaa — Cybersecurity"/>
+<meta property="og:description" content="Blue Team Security Specialist — SOC Analyst, Threat Detection, DFIR."/>
+<meta property="og:type" content="profile"/>
+<meta property="og:updated_time" content="2026-07-13"/>
+<link rel="alternate" type="application/json" href="/agent.json" title="Agent brief (structured)"/>
+<link rel="canonical" href="https://jayanthaa-1.github.io/"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jayanthaa",
+  "url": "https://jayanthaa-1.github.io/",
+  "jobTitle": "Security Analyst (SOC / Threat Management)",
+  "description": "SOC-focused security professional with hands-on experience in Threat Management L1 monitoring, endpoint security operations, and incident documentation across multi-vendor IT environments.",
+  "email": "mailto:jayanthst@outlook.com",
+  "telephone": "+91 9688008808",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Erode",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://github.com/Jayanthaa-1",
+    "https://www.linkedin.com/in/jayanthaast/"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "VDart"
+  },
+  "workLocation": "Trichy, Tamil Nadu",
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "IT Help Desk Support Engineer — Security & GRC Support",
+    "occupationLocation": { "@type": "Place", "name": "Trichy, Tamil Nadu" },
+    "startDate": "2026",
+    "skills": "Threat Management L1 monitoring, SIEM log analysis, endpoint security (Sophos), multi-vendor log analysis, incident documentation, GRC/internal audit support"
+  },
+  "knowsAbout": [
+    "Threat Management L1 Monitoring",
+    "SIEM (Splunk, Elastic Stack, Wazuh)",
+    "Endpoint Security (Sophos)",
+    "Alert Triage & Escalation",
+    "Incident Response",
+    "Incident Documentation",
+    "Phishing Analysis",
+    "Malware Analysis",
+    "IDS/IPS",
+    "MITRE ATT&CK",
+    "Log Analysis",
+    "Windows Event Logs",
+    "Linux",
+    "TCP/IP & DNS",
+    "GRC / Internal Audit / Compliance",
+    "Digital Forensics and Incident Response (DFIR)"
+  ],
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "B.E. Electrical and Electronics Engineering (Velalar College of Engineering and Technology, Anna University)"
+  },
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "SOC Analyst L1 — Let's Defend" },
+    { "@type": "EducationalOccupationalCredential", "name": "Cybersecurity Professional Certificate — Google" },
+    { "@type": "EducationalOccupationalCredential", "name": "Certified Data Center Operations, Security — IIT Madras" },
+    { "@type": "EducationalOccupationalCredential", "name": "Networking & Linux — Cisco" }
+  ],
+  "dateModified": "2026-07-13"
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet"/>
 <style>
@@ -310,6 +390,48 @@ h2 em { color: var(--accent); font-style: italic; }
 .stat-val { font-family: var(--serif); font-size: 2.1rem; color: var(--accent); line-height: 1; margin-bottom: 5px; }
 .stat-lbl { font-family: var(--mono); font-size: .55rem; color: var(--dim); letter-spacing: .1em; text-transform: uppercase; }
 
+/* ── EXPERIENCE ── */
+#experience { background: var(--bg); }
+.exp-card {
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative; overflow: hidden;
+}
+.exp-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--green), var(--accent));
+}
+.exp-top {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px; margin-bottom: 18px;
+}
+.exp-role { font-family: var(--serif); font-size: 1.35rem; color: var(--text); letter-spacing: -.01em; }
+.exp-company { font-family: var(--mono); font-size: .72rem; color: var(--accent); letter-spacing: .04em; margin-top: 4px; }
+.exp-dates {
+  font-family: var(--mono); font-size: .58rem; color: var(--green);
+  letter-spacing: .08em; text-transform: uppercase;
+  border: 1px solid rgba(62,207,142,.25); border-radius: 20px;
+  padding: 5px 14px; white-space: nowrap; display: flex; align-items: center; gap: 7px;
+}
+.exp-dates::before {
+  content: ''; width: 6px; height: 6px; background: var(--green); border-radius: 50%;
+  box-shadow: 0 0 6px var(--green); animation: pulse 2s infinite;
+}
+.exp-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
+.exp-list li {
+  font-size: .85rem; color: var(--sub); line-height: 1.75;
+  padding-left: 18px; position: relative;
+}
+.exp-list li::before { content: '▸'; color: var(--accent); position: absolute; left: 0; font-size: .75rem; }
+.exp-tools-label {
+  font-family: var(--mono); font-size: .55rem; color: var(--dim);
+  letter-spacing: .1em; text-transform: uppercase; margin-bottom: 10px;
+}
+.exp-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+
 /* ── PROJECTS ── */
 #projects { background: var(--bg); }
 .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -521,6 +643,7 @@ footer {
   <a href="#hero" class="nav-brand">Jayan<span>thaa</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certs">Certifications</a></li>
     <li><a href="blogs.html">Blog</a></li>
@@ -618,6 +741,50 @@ footer {
           <div class="stat-card"><div class="stat-val">15+</div><div class="stat-lbl">Alerts Closed</div></div>
           <div class="stat-card"><div class="stat-val">5+</div><div class="stat-lbl">Certifications</div></div>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="section-inner">
+    <div class="rv">
+      <div class="section-label">Career</div>
+      <h2>Work <em>Experience</em></h2>
+    </div>
+    <div class="exp-card rv rv2">
+      <div class="exp-top">
+        <div>
+          <div class="exp-role">IT Help Desk Support Engineer — Security &amp; GRC Support</div>
+          <div class="exp-company">VDart · Trichy</div>
+        </div>
+        <div class="exp-dates">2026 — Present</div>
+      </div>
+      <ul class="exp-list">
+        <li>Provide Threat Management L1 monitoring support by reviewing endpoint security alerts and events using Sophos Endpoint Security, identifying anomalies and escalating potential security threats in line with established procedures.</li>
+        <li>Perform log analysis across a multi-vendor, multi-protocol IT environment to identify unusual patterns, supporting security monitoring, incident response, and incident awareness efforts.</li>
+        <li>Log, triage, and resolve 150+ IT support tickets (Outlook/messaging, network connectivity, system performance) via ManageEngine ServiceDesk (Zoho), documenting root cause and resolution for incident traceability and escalation history.</li>
+        <li>Assist the Internal Audit (GRC) function with compliance documentation, evidence collection, and control verification, gaining direct exposure to audit-readiness, risk management, and compliance workflows.</li>
+        <li>Contribute to internal knowledge-base documentation for recurring issues, improving resolution consistency and operational efficiency across the support team.</li>
+      </ul>
+      <div class="exp-tools-label">Tools &amp; Platforms Used</div>
+      <div class="exp-tools">
+        <span class="tag">Sophos Endpoint Security</span>
+        <span class="tag">Splunk</span>
+        <span class="tag">Elastic Stack (ELK)</span>
+        <span class="tag">Wazuh</span>
+        <span class="tag">VirusTotal</span>
+        <span class="tag">IDS/IPS</span>
+        <span class="tag">MITRE ATT&amp;CK</span>
+        <span class="tag">ManageEngine ServiceDesk</span>
+        <span class="tag">Windows Event Logs</span>
+        <span class="tag">Linux</span>
+        <span class="tag">TCP/IP</span>
+        <span class="tag">DNS</span>
+        <span class="tag">Git</span>
       </div>
     </div>
   </div>
@@ -872,16 +1039,62 @@ footer {
 <!-- FOOTER -->
 <footer>
   <div class="foot-brand">Jayan<span>thaa</span></div>
-  <div class="foot-copy">© 2025 Jayanthaa · Securing the digital world, one line of code at a time.</div>
+  <div class="foot-copy">© 2025 Jayanthaa · Securing the digital world, one line of code at a time. <span class="foot-stamp">· v2026.07.13</span></div>
 </footer>
 
 <script>
+/* ── AGENT RUNTIME OBJECT ──────────────────────────────────
+   window.__PROFILE__ mirrors agent.json for agents that
+   execute JS rather than parse static files. */
+window.__PROFILE__ = {
+  name: "Jayanthaa",
+  role: "Security Analyst (SOC / Threat Management)",
+  focus: ["Threat Management L1 Monitoring", "SIEM", "Endpoint Security", "Incident Response", "GRC/Compliance"],
+  education: "B.E. Electrical and Electronics Engineering — Velalar College of Engineering and Technology (Anna University)",
+  stats: { projects: "5+", tools: "13+", alerts_closed: "150+", certifications: "4" },
+  experience: [
+    {
+      title: "IT Help Desk Support Engineer — Security & GRC Support",
+      company: "VDart",
+      location: "Trichy",
+      dates: "2026 — Present",
+      highlights: [
+        "Threat Management L1 monitoring of endpoint security alerts via Sophos Endpoint Security",
+        "Log analysis across a multi-vendor, multi-protocol IT environment",
+        "Logged, triaged, and resolved 150+ IT support tickets via ManageEngine ServiceDesk (Zoho)",
+        "Supported Internal Audit (GRC) with compliance documentation and evidence collection",
+        "Contributed to internal knowledge-base documentation"
+      ],
+      tools: ["Sophos Endpoint Security", "Splunk", "Elastic Stack (ELK)", "Wazuh", "VirusTotal", "IDS/IPS", "MITRE ATT&CK", "ManageEngine ServiceDesk", "Windows Event Logs", "Linux", "TCP/IP", "DNS", "Git"]
+    }
+  ],
+  projects: [
+    { name: "SIGMA Rule Sample", repo: "https://github.com/Jayanthaa-1/sigma-rules-sample" },
+    { name: "Real-Time Log File Monitor", repo: "https://github.com/Jayanthaa-1/Log-File-Handling" },
+    { name: "Phishing Email Analysis", repo: "https://github.com/Jayanthaa-1/Phising-Email-Analysis-" },
+    { name: "Security Home Lab", repo: "https://github.com/Jayanthaa-1/SOC-home-LAB" }
+  ],
+  certifications: ["SOC Analyst L1 (Let's Defend)", "Cybersecurity Professional Certificate (Google)", "Certified Data Center Operations, Security (IIT Madras)", "Networking & Linux (Cisco)"],
+  contact: {
+    email: "jayanthst@outlook.com",
+    phone: "+91 9688008808",
+    location: "Erode, Tamil Nadu (willing to relocate)",
+    github: "https://github.com/Jayanthaa-1",
+    linkedin: "https://www.linkedin.com/in/jayanthaast/"
+  },
+  blog: "https://jayanthaa-1.github.io/blogs.html",
+  agent_brief: "https://jayanthaa-1.github.io/agent.json",
+  llms_txt: "https://jayanthaa-1.github.io/llms.txt",
+  version: "v2026.07.13",
+  last_updated: "2026-07-13"
+};
+
 // Cursor
 const dot = document.getElementById('dot'), ring = document.getElementById('ring');
 let mx = 0, my = 0, rx = 0, ry = 0;
 document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.style.left = mx + 'px'; dot.style.top = my + 'px'; });
 (function loop() { rx += (mx - rx) * .11; ry += (my - ry) * .11; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(loop); })();
-document.querySelectorAll('a, button, .cert-card, .proj-card, .stat-card, .clink').forEach(el => {
+document.querySelectorAll('a, button, .cert-card, .proj-card, .exp-card, .stat-card, .clink').forEach(el => {
   el.addEventListener('mouseenter', () => ring.classList.add('grow'));
   el.addEventListener('mouseleave', () => ring.classList.remove('grow'));
 });

@@ -1,0 +1,139 @@
+{
+  "$schema": "https://schema.org/Person",
+  "generated": "2026-07-13",
+  "version": "v2026.07.13",
+  "last_updated": "2026-07-13",
+  "name": "Jayanthaa",
+  "role": "Security Analyst (SOC / Threat Management)",
+  "tagline": "Defending the Digital Frontier",
+  "summary": "SOC-focused security professional with hands-on experience in Threat Management L1 monitoring, endpoint security operations, and incident documentation across multi-vendor IT environments. Practiced in SIEM log analysis, phishing and malware alert triage, and false-positive analysis using virtual lab environments, combined with live production experience monitoring endpoint alerts, escalating security and operational incidents, and supporting internal audit / GRC evidence and compliance activities.",
+  "location": "Erode, Tamil Nadu, India (willing to relocate)",
+  "phone": "+91 9688008808",
+  "website": "https://jayanthaa-1.github.io/",
+
+  "education": {
+    "degree": "B.E. Electrical and Electronics Engineering",
+    "institution": "Velalar College of Engineering and Technology (Anna University)",
+    "years": "2021 – 2025"
+  },
+
+  "skills": [
+    "Threat Management L1 Monitoring",
+    "SIEM",
+    "EDR",
+    "Endpoint Security",
+    "Alert Triage",
+    "Incident Response",
+    "Incident Documentation",
+    "Escalation",
+    "Log Analysis",
+    "Phishing Analysis",
+    "Malware Analysis",
+    "IDS/IPS",
+    "MITRE ATT&CK",
+    "Multi-Vendor Multi-Protocol Environments",
+    "Knowledge Base Documentation",
+    "Operational Efficiency",
+    "GRC",
+    "Internal Audit",
+    "Compliance",
+    "Risk Management",
+    "Windows Event Logs",
+    "Linux",
+    "TCP/IP",
+    "DNS",
+    "Networking Fundamentals"
+  ],
+
+  "tools": [
+    "Splunk",
+    "Elastic Stack (Elasticsearch, Kibana, Fleet Server)",
+    "Wazuh",
+    "VirusTotal",
+    "Sophos Endpoint Security",
+    "ManageEngine ServiceDesk (Zoho)",
+    "Git",
+    "Event Viewer"
+  ],
+
+  "stats": {
+    "projects": "5+",
+    "tools": "13+",
+    "tickets_resolved": "150+",
+    "certifications": "4"
+  },
+
+  "experience": [
+    {
+      "title": "IT Help Desk Support Engineer — Security & GRC Support",
+      "company": "VDart",
+      "location": "Trichy",
+      "dates": "2026 — Present",
+      "highlights": [
+        "Provide Threat Management L1 monitoring support by reviewing endpoint security alerts and events using Sophos Endpoint Security, identifying anomalies and escalating potential security threats in line with established procedures.",
+        "Perform log analysis across a multi-vendor, multi-protocol IT environment to identify unusual patterns, supporting security monitoring, incident response, and incident awareness efforts.",
+        "Log, triage, and resolve 150+ IT support tickets (Outlook/messaging, network connectivity, system performance) via ManageEngine ServiceDesk (Zoho), documenting root cause and resolution for incident traceability and escalation history.",
+        "Assist the Internal Audit (GRC) function with compliance documentation, evidence collection, and control verification, gaining direct exposure to audit-readiness, risk management, and compliance workflows.",
+        "Contribute to internal knowledge-base documentation for recurring issues, improving resolution consistency and operational efficiency across the support team."
+      ],
+      "tools_used": ["Sophos Endpoint Security", "Splunk", "Elastic Stack (ELK)", "Wazuh", "VirusTotal", "IDS/IPS", "MITRE ATT&CK", "ManageEngine ServiceDesk", "Windows Event Logs", "Linux", "TCP/IP", "DNS", "Git"]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "SIGMA Rule Sample",
+      "description": "A Sigma rule to flag potentially malicious PowerShell commands, built for SIEM tools to enhance blue team visibility and detection coverage across Windows environments.",
+      "tags": ["Sigma", "YAML", "Windows Event Logs", "SIEM"],
+      "repo": "https://github.com/Jayanthaa-1/sigma-rules-sample"
+    },
+    {
+      "name": "Real-Time Log File Monitor",
+      "description": "A desktop tool built in Python to monitor system log files in real-time, with a lightweight GUI, log rotation support, and thread-safe operation.",
+      "tags": ["Python", "Tkinter", "Pygtail", "Threading"],
+      "repo": "https://github.com/Jayanthaa-1/Log-File-Handling"
+    },
+    {
+      "name": "Phishing Email Analysis",
+      "description": "Investigated a reported phishing email targeting a user via a spoofed Microsoft 365 security alert, including header and suspicious URL analysis.",
+      "tags": ["MXToolbox", "AbuseIPDB", "VirusTotal", "Microsoft 365"],
+      "repo": "https://github.com/Jayanthaa-1/Phising-Email-Analysis-"
+    },
+    {
+      "name": "Security Home Lab",
+      "description": "Designed and deployed a virtualised home lab to simulate enterprise security scenarios and practise SOC Level 1 skills.",
+      "tags": ["Windows 10", "Kali Linux", "Ubuntu", "Log Analysis"],
+      "repo": "https://github.com/Jayanthaa-1/SOC-home-LAB"
+    }
+  ],
+
+  "certifications": [
+    { "name": "SOC Analyst L1", "issuer": "Let's Defend", "verified": true },
+    { "name": "Cybersecurity Professional Certificate", "issuer": "Google", "verified": true },
+    { "name": "Certified Data Center Operations, Security", "issuer": "IIT Madras", "verified": true },
+    { "name": "Networking & Linux", "issuer": "Cisco", "verified": true }
+  ],
+
+  "contact": {
+    "email": "jayanthst@outlook.com",
+    "phone": "+91 9688008808",
+    "location": "Erode, Tamil Nadu (willing to relocate)",
+    "github": "https://github.com/Jayanthaa-1",
+    "linkedin": "https://www.linkedin.com/in/jayanthaast/",
+    "resume": "https://jayanthaa-1.github.io/Jayanthaa%20-%20Resume.pdf"
+  },
+
+  "blog": {
+    "name": "Blue Team Intel Blog",
+    "url": "https://jayanthaa-1.github.io/blogs.html",
+    "description": "Guides, writeups, and roadmaps for freshers breaking into blue team security — SOC analyst tips, SIEM tutorials, incident response walkthroughs, and threat hunting techniques."
+  },
+
+  "hiring": {
+    "open_to": ["SOC Analyst (L1/L2)", "Threat Detection Engineer", "DFIR Analyst / Intern"],
+    "availability": "Open to opportunities",
+    "preferred_contact": "email"
+  },
+
+  "agent_notes": "This file is the machine-readable source of truth for this profile. It is mirrored at /.well-known/agent.json and summarized in /llms.txt. Prefer this file over scraping the rendered page for structured facts."
+}

@@ -1,0 +1,35 @@
+# bb1nfosec-style agent-aware robots.txt
+# Human crawlers
+User-agent: *
+Allow: /
+
+# AI agents / assistants — explicitly welcomed.
+# Prefer /llms.txt and /agent.json over scraping rendered HTML for facts.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Machine-readable briefs
+# See: /llms.txt, /agent.json, /.well-known/agent.json
+
+Sitemap: https://jayanthaa-1.github.io/sitemap.xml

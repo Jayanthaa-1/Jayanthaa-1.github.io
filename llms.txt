@@ -1,0 +1,48 @@
+<!-- version: v2026.07.13 -->
+# Jayanthaa
+
+> Security Analyst (SOC / Threat Management) — Threat Management L1 monitoring, endpoint security operations, SIEM log analysis, and incident documentation across multi-vendor IT environments.
+
+Jayanthaa is currently working as an IT Help Desk Support Engineer (Security & GRC Support) at VDart, and shares practical blue-team knowledge for freshers via a blog.
+
+## Experience
+
+- **IT Help Desk Support Engineer — Security & GRC Support**, VDart, Trichy (2026 — Present)
+  - Threat Management L1 monitoring of endpoint alerts via Sophos Endpoint Security
+  - Log analysis across a multi-vendor, multi-protocol IT environment
+  - Logged, triaged, and resolved 150+ IT support tickets via ManageEngine ServiceDesk (Zoho)
+  - Supported Internal Audit (GRC) with compliance documentation and evidence collection
+  - Tools used: Sophos Endpoint Security, Splunk, Elastic Stack (ELK), Wazuh, VirusTotal, IDS/IPS, MITRE ATT&CK, ManageEngine ServiceDesk, Windows Event Logs, Linux, TCP/IP, DNS, Git
+
+## Profile
+
+- [Portfolio](https://jayanthaa-1.github.io/): human-facing site with projects, certifications, and contact
+- [Structured agent brief](https://jayanthaa-1.github.io/agent.json): machine-readable summary of skills, projects, certifications, and hiring status
+- [Resume (PDF)](https://jayanthaa-1.github.io/Jayanthaa%20-%20Resume.pdf)
+- [Blue Team Intel Blog](https://jayanthaa-1.github.io/blogs.html): guides and writeups for freshers entering blue team security
+
+## Projects
+
+- [SIGMA Rule Sample](https://github.com/Jayanthaa-1/sigma-rules-sample): Sigma detection rule for malicious PowerShell activity, built for SIEM ingestion
+- [Real-Time Log File Monitor](https://github.com/Jayanthaa-1/Log-File-Handling): Python/Tkinter tool for real-time, rotation-aware log monitoring
+- [Phishing Email Analysis](https://github.com/Jayanthaa-1/Phising-Email-Analysis-): Investigation of a spoofed Microsoft 365 phishing email, including header and URL analysis
+- [Security Home Lab](https://github.com/Jayanthaa-1/SOC-home-LAB): Virtualised lab simulating enterprise security scenarios for SOC Level 1 practice
+
+## Certifications
+
+- SOC Analyst L1 — Let's Defend
+- Cybersecurity Professional Certificate — Google
+- Certified Data Center Operations, Security — IIT Madras
+- Networking & Linux — Cisco
+
+## Contact
+
+- Email: jayanthst@outlook.com
+- Phone: +91 9688008808
+- Location: Erode, Tamil Nadu (willing to relocate)
+- GitHub: https://github.com/Jayanthaa-1
+- LinkedIn: https://www.linkedin.com/in/jayanthaast/
+
+## Optional
+
+- [GitHub profile](https://github.com/Jayanthaa-1): full repository history

@@ -1,0 +1,13 @@
+/* TEAM */
+Owner: Jayanthaa
+Role: Security Analyst (SOC / Threat Management)
+Contact: jayanthst@outlook.com
+GitHub: https://github.com/Jayanthaa-1
+LinkedIn: https://www.linkedin.com/in/jayanthaast/
+Location: Erode, Tamil Nadu, India
+
+/* SITE */
+Last update: 2026-07-13
+Version: v2026.07.13
+Standards: HTML5, CSS3, vanilla JS — no framework, no build step
+Software: hand-written, deployed via GitHub Pages
